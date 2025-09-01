@@ -1,0 +1,1114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Styles for highlighting "ASUS ROG" */
+.rog-font {
+    font-family: 'Roboto', sans-serif;
+    /* Use Roboto font */
+    font-weight: 700;
+    color: #a50f0f;
+    /* Highlight color */
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    /* Use Poppins font */
+    font-weight: 600;
+    text-align: center;
+    color: #222;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 64px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+body {
+    width: 100%;
+}
+
+/*Header Start*/
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 40px;
+    /*top and bottom left and right*/
+    background-color: #e3e6f3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 300;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #5a61a9;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 20%;
+    height: 2px;
+    background: #5a61a9;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/*Home style*/
+#mainAd {
+    position: relative;
+    /* Ensure positioning for the pseudo-element */
+    background-image: url("IMG/product.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 20px 250px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#mainAd::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.845));
+    z-index: 0;
+    /* Ensure it is behind the content */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Styles for h1, h2, h4 */
+#mainAd h1,
+#mainAd h2,
+#mainAd h4 {
+    font-family: 'Playfair Display', serif;
+    /* Change to your chosen font */
+    color: #0f6a59;
+    /* Darker shade of green for contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    /* Add a subtle shadow for better readability */
+    z-index: 1;
+}
+
+#mainAd h1 {
+    font-size: 3em;
+    /* Adjust size as needed */
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#mainAd h5 {
+    font-size: 2.5em;
+    /* Adjust size as needed */
+    font-weight: 700;
+    color: #ffffff;
+    /* Slightly lighter shade for variety */
+}
+
+#mainAd h4 {
+    font-size: 1.5em;
+    /* Adjust size as needed */
+    font-weight: 700;
+    color: #ffffff;
+    /* Match with h1 for consistency */
+}
+
+#mainAd button {
+    background: linear-gradient(45deg, #0fa59be4, #0f6a59c0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Ensure it stays above the pseudo-element */
+    z-index: 1;
+}
+
+#mainAd button:hover {
+    background: linear-gradient(45deg, #0f6a59b5, #0fa59ba0);
+    transform: scale(1.05);
+}
+
+#mainAd button:active {
+    transform: scale(0.95);
+}
+
+.product-container {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    /* Ensure it stays above the pseudo-element */
+    z-index: 1;
+    margin-top: 20px;
+    /* Space from the headings */
+    overflow-x: auto;
+    /* Allow horizontal scrolling if necessary */
+    padding-bottom: 20px;
+    /* Space for scroll bar */
+}
+
+.product-box {
+    background: rgba(255, 255, 255, 0.648);
+    /* Slightly transparent white background */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 0 200px;
+    /* Fixed width for each product box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    /* Ensure padding is included in the width */
+}
+
+.product-box img {
+    width: 200px;
+    /* Fixed width */
+    height: 200px;
+    /* Fixed height */
+    object-fit: cover;
+    /* Ensure image covers the area without distortion */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-box h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-box p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-box button {
+    background: linear-gradient(45deg, #0fa59be4, #0f6a59c0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-box button:hover {
+    background: linear-gradient(45deg, #0f6a59b5, #0fa59ba0);
+    transform: scale(1.05);
+}
+
+.product-box button:active {
+    transform: scale(0.95);
+}
+
+#fe-img {
+    height: 120px;
+    width: 200px;
+}
+
+#feature .fe-box {
+    width: 220px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Define the hover state with animation */
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+    transform: translateY(-10px) scale(1.05);
+    /* Slight lift and scale up on hover */
+}
+
+/* Add keyframes for additional animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply float animation on hover */
+#feature .fe-box:hover {
+    animation: float 1.5s ease-in-out infinite;
+    /* Float animation for a subtle bounce effect */
+}
+
+#feature .fe-box h6 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+
+#feature .fe-box:nth-child(2)h6 {
+    background-color: #b2d1a0;
+}
+
+#feature .fe-box:nth-child(3)h6 {
+    background-color: #d1e8f2;
+}
+
+#feature .fe-box:nth-child(4)h6 {
+    background-color: #f6dbf6;
+}
+
+#feature .fe-box:nth-child(5)h6 {
+    background-color: #fff2e5;
+}
+
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#product1 {
+    text-align: center;
+
+}
+
+#product1 .pro-container {
+    display: flex;
+    /*This will bring slider below the page and arrange the boxex side wise so you have to add flex wrap there to break the boxes into 4 ad 4 bewlo*/
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span {
+    color: #606063;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5 {
+    padding: 7px 0;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .pro .des i {
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4 {
+    padding: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#product1 .pro .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    position: absolute;
+    /*If using pos absolute in child element we have to firs take parent element and add pos relative in parent element*/
+    bottom: 20px;
+    right: 10px;
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(IMG/banner1.jpg);
+    /*for background image consider following things*/
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h4 {
+    color: white;
+    font-size: 16px;
+}
+
+#banner h2 {
+    color: white;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+#banner h2 span {
+    color: #ef3636;
+}
+
+#banner button:hover {
+    background-color: #088178;
+    color: white;
+}
+
+#smBanner .bannerBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(IMG/b1.png);
+    /*for background image consider following things*/
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+#smBanner .bannerBox2 {
+    background-image: url(IMG/b2.png);
+    /*for background image consider following things*/
+
+}
+
+#smBanner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#smBanner h4,
+span {
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: rgb(255, 253, 253);
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.2s;
+}
+
+#smBanner .bannerBox:hover button {
+    background-color: rgb(43, 199, 16);
+    border: 1px solid rgb(43, 199, 16);
+}
+
+#banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#banner3 .bannerBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(IMG/b3.png);
+    /*for background image consider following things*/
+    width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner3 .bannerBox2 {
+    background-image: url(IMG/b4.png);
+}
+
+#banner3 .bannerBox3 {
+    background-image: url(IMG/b5.jpg);
+}
+
+#banner3 .bannerBox3 h4 {
+    margin-left: -30px;
+}
+
+#newsMember {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(IMG/b6.png);
+}
+
+#newsMember .form {
+    display: flex;
+    width: 40%;
+}
+
+#newsMember h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+
+#newsMember p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ccd5e1;
+}
+
+#newsMember p span {
+    color: #ffbd27;
+}
+
+#newsMember input {
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsMember button {
+    background-color: #088178;
+    color: white;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .col {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+footer .logo {
+    margin-bottom: 30px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+
+footer h4 {
+    font-size: 13px;
+    padding: 20px;
+}
+
+footer a {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+}
+
+footer .follow {
+    margin-top: 20px;
+}
+
+footer .follow i {
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install .row img {
+    border: 1px solid #088178;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+footer.follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+footer .copyright {
+    text-align: center;
+    width: 100%;
+    /*if not 100% the it will take the flex wrap property and b aside of the install app column*/
+}
+
+.icon img {
+    height: 20px;
+    width: 20px;
+}
+
+.row img {
+    height: 50px;
+    width: 170px;
+}
+
+#payment img {
+    height: 50px;
+    width: 60px;
+}
+
+/*Media Query*/
+@media only screen and (max-width: 768px) {
+    #mainAd {
+        padding: 20px 20px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #mainAd h1 {
+        font-size: 2.5em;
+    }
+
+    #mainAd h5 {
+        font-size: 2em;
+    }
+
+    #mainAd h4 {
+        font-size: 1.2em;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-box {
+        flex: 0 0 auto;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #mainAd {
+        padding: 20px 50px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-box {
+        flex: 0 0 auto;
+        width: 80%;
+    }
+}
+
+/*shop page style*/
+#prodetails{
+    display: flex;
+    margin-top: 20px;
+}
+#pageHeader{
+    background-image: url(IMG/shpBanner.png);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+
+}
+#pageHeader h2,#pageHeader p{
+    color: white;
+}
+
+#pegination{
+    text-align: center;
+}
+#pegination a{
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+}
+/*Single product*/
+#prodetails .single_Pro_Img{
+    margin-left: -20px;
+}
+.single_Pro_Img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Max width for the main container */
+    margin: auto; /* Center the container */
+}
+
+#main_Img {
+    width: 100%; /* Ensure it takes up the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 569px; /* Ensure the image doesn't exceed the specified dimensions */
+    max-height: 436px;
+}
+
+.small_Img_Grp {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Space between small images */
+    margin-top: 20px; /* Space between the main and small images */
+}
+
+.small_img_col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Small_image {
+    height: 100px;
+    width: 140px; /* Keep the smaller images square for uniformity */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.Small_image:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+#prodetails .single_product_detail{
+    width: 50%;
+    padding-top:30px ;
+}
+#prodetails .single_product_detail h4{
+    padding: 40px 0 20px 0;
+}
+#prodetails .single_product_detail h2{
+    font-size: 26px;
+}
+#prodetails .single_product_detail select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+#prodetails .single_product_detail input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#prodetails .single_product_detail button{
+    background-color: #088178;
+}
+#prodetails .single_product_detail span{
+    line-height:25px;
+    color:rgb(32, 30, 30);
+}
+
+/*Blog page style*/
+#pageHeader.blog_header{
+    background-image: url(IMG/Alienware.png);
+    height: 3   67px;
+    width: 100%;
+}
+
+#blog{
+    padding:150px 150px 0 150px;
+}
+#blog .blog_box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 90px;
+}
+#blog .blogImg{
+    width: 50%;
+    margin-right: 40px;
+}
+#blog img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 0.5px solid;
+}
+#blog .blog_Details{
+    width: 50%;
+}
+#blog .blog_Details a{
+    text-decoration: none;
+    font-size: 11px;
+    color: black;
+    font-weight: 700;
+    position: relative;
+    transition: 0.3s;
+}
+#blog .blog_Details a::after{
+    content:"";
+    width: 50px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 4px;
+    right:-60px;
+}
+#blog .blog_Details a:hover{
+    color: #088178;
+}
+
+/*about style*/
+#pageHeader .about_header{
+    background-image: url(IMG/shpBanner.png);
+}
+#about_head{
+    display: flex;
+    align-items: center;
+}
+#about_head div{
+    padding-left: 40px;
+}
+#about_head img{
+    width: 50%;
+    height: auto;
+}
+
+/*contact style*/
+.details div li i img{
+    height: 16px;
+    width: 16px;
+}
+
+#contact_details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#contact_details .details{
+    width: 40%;
+}
+#contact_details .details span,#form_details form span{
+    font-size: 12px;
+}
+#contact_details .details h2,#form_details form h2{
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+#contact_details .details h3{
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+#contact_details .details li{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+#contact_details .details li i{
+    padding-right: 22px;
+}
+#contact_details .details li p{
+    margin: 0;
+    font-size: 14px;
+}
+#contact_details .map{
+    width: 55%;
+    height: 400px;
+}
+#contact_details .map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#form_details form{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#form_details{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+
+#form_details form input,
+#form_details form text,#form_details form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #abaaaa;
+}
+
+#form_details form button{
+    background-color: #088178;
+    color: white;
+}
+
+.people img {
+    width: 65px; /* Adjust width as needed */
+    height: 65px; /* Adjust heigh65s needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fills the circle without stretching */
+    margin-right: 15px; /* Optional: Adjust spacing */
+}
+#form_details.people div{
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+} 
+#form_details.people div p{
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+#form_details.people div p span{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*cart style*/
+
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart table img{
+    width: 70px;
+}
+#cart table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+}   
+#cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+} 
+#cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+} 
+#cart table td:nth-child(4),#cart table td:nth-child(5),#cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+} 
+#cart table td:nth-child(5) input{
+    width: 70px;
+    padding: 10px 5px 10px 15px ;
+}  
+#cart table thead{
+    border: 1px solid #b1b1b0;
+    border-left: none;
+    border-right: none;
+}
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+#cart table tbody td{
+    font-size: 13px;
+}
+
+#cart_add{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+
+#cuppon{
+    width: 50%;
+    margin-bottom: 30px;
+}
+#cuppon h3,#subtotal h3 {
+    padding-bottom: 15px;
+}
+#cuppon input{
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+}
+#cuppon button,#subtotal button{
+    background-color: #088178;
+    color:white;
+    padding: 12px 20px;
+}
+
+#subtotal{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#subtotal table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}
